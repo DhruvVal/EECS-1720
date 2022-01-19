@@ -1,4 +1,3 @@
-var w;
 
 function setup() {
   createCanvas(640, 360);
@@ -11,6 +10,11 @@ function draw() {
   // Update and display object
   w.update();
   w.display();
+  fill(255, 204, 0);
+ellipse(5, 4, 300);
+  fill('rgba(0,255,0, 0.25)');
+rect(0, 300, 700, 60);
+
 }
 
 function Walker() {
@@ -20,7 +24,7 @@ function Walker() {
 
   this.update = function() {
     // Move Walker randomly
-    var vel = createVector(random(-5, 5), random(-5, 5));
+    var vel = createVector(random(-3, 3), random(-5, 5));
     this.pos.add(vel);
   }
 
